@@ -1,17 +1,26 @@
+import { CardContainer } from './CardContainer';
+import { CardBody } from './CardBody';
+import { CardTitle } from './CardTitle';
+import { CardText } from './CardText';
+import { CardLink } from './CardLink';
+import { CardFooter } from './CardFooter'; // Nueva importación
+
 function Card() {
   return (
-    <div className="card" style={{ width: '18rem' }}>
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card’s content.
-        </p>
-        <a href="#" className="btn btn-primary">
-          Go somewhere
-        </a>
-      </div>
-    </div>
+    <CardContainer width="380px"> 
+
+
+      <CardBody>
+        <CardTitle title="Un Título Más Atractivo" />
+        <CardText text="Este es un ejemplo de texto más descriptivo para nuestra hermosa tarjeta. Podemos añadir más detalles aquí para hacerla interesante." />
+        
+        <CardLink href="#" label="Descubre Más" variant="dark" /> 
+      </CardBody>
+
+      <CardFooter>
+        <span>Última actualización: Hoy</span>
+      </CardFooter>
+    </CardContainer>
   );
 }
 
